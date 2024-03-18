@@ -1,0 +1,7 @@
+repos:
+  - repo: local
+    hooks:
+      - id: pre-commit_JSON_local
+      - name: "El meu pre-commithookper comprovar el format JSON"
+        entry: ./hooksLocals/pre-commit_JSON_local
+        language: system
