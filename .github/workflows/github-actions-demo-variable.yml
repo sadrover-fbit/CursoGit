@@ -1,0 +1,22 @@
+name: Demo variable de workflow 1
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [workflow_dispatch]
+env:
+  VARIABLE_2: Variable 2 de workflow
+jobs:
+  TestVariable1:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Variable 1: ${{ vars.VARIABLE_1 }}" 
+    - run: echo "Variable 1: ${{ vars.VARIABLE_1 }}" 
+    - run: echo "Variable 2: ${{ env.VARIABLE_2 }}" 
+      env:
+        VARIABLE_2: Nueva variable 2
+  TestVariable1:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo "Variable 1: ${{ vars.VARIABLE_1 }}" 
+    - run: echo "Variable 2: ${{ env.VARIABLE_2 }}" 
+    - run: echo "Variable 2: ${{ env.VARIABLE_2 }}" 
+      env:
+        VARIABLE_2: Nueva variable 2
