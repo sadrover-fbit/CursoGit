@@ -20,4 +20,4 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: artifact
-      run: echo "Artifact - {{artifact}"
+    - run: echo "Artifact - {{artifact}"
