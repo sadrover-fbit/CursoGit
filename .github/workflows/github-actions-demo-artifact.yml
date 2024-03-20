@@ -1,0 +1,24 @@
+name: Demo artifact
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: 
+  push:
+    branches: [main]
+jobs:
+  guarda:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: artifact
+        path: artifact.txt
+  carga:
+    needs: guarda
+    runs-on: ubuntu-latest
+    steps:
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: artifact
+    - run: cat artifact.txt
