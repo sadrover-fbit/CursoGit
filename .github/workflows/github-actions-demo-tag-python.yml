@@ -1,8 +1,8 @@
 name: GitHub Actions Demo Tag Python
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: 
-  create:
-    tag: [v.*.*]
+  push:
+    branches: [sadrover]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
