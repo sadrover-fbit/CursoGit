@@ -8,9 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - run: echo Variable1: "${{ vars.VARIABLE_1 }}" 
-    - run: echo Variable2: "${{ env.VARIABLE_2 }}" 
-    - run: echo Variable2: "${{ env.VARIABLE_2 }}" 
+    - run: echo "Variable1: ${{ vars.VARIABLE_1 }}" 
+    - run: echo "Variable2: ${{ env.VARIABLE_2 }}" 
+    - run: echo "Variable2: ${{ env.VARIABLE_2 }}" 
       env: 
         VARIABLE_2: Nova variable 2
 	
