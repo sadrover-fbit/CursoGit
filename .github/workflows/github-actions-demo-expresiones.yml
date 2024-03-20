@@ -1,0 +1,18 @@
+name: Demo expresiones
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: 
+  [push, pull_request]
+jobs:
+  expresion:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push en main
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        run: echo "Se ha realizado un push en Main"
+      - name: Pull request
+        if: ${{ github.event_name == 'pull_request'}}
+        run: echo "Se ha realizado un pull request"
+      - name: Pull request en main
+        if: ${{ github.event_name == 'pull_request' && github.ref == 'refs/heads/main' }}
+        run: echo "Se ha realizado un pull request en main"
+
