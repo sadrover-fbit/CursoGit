@@ -12,7 +12,10 @@ jobs:
       - name: Pull request
         if: ${{ github.event_name == 'pull_request'}}
         run: echo "Se ha realizado un pull request"
-      - name: Pull request en main
-        if: ${{ github.event_name == 'pull_request' && github.ref == 'refs/heads/main' }}
-        run: echo "Se ha realizado un pull request en main"
+      - name: Pull request a main
+        if: ${{ github.event_name == 'pull_request' && github.base_ref == 'refs/heads/main' }}
+        run: echo "Se ha realizado un pull request a la rama main"
+      - name: Pull request desde main
+        if: ${{ github.event_name == 'pull_request' && github.base_ref == 'refs/heads/main' }}
+        run: echo "Se ha realizado un pull request desde la rama main"
 
