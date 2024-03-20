@@ -13,3 +13,4 @@ jobs:
         python-version: '3.10' 
     - run: chmod +x my_script.py
     - run: python my_script.py
+    - run: echo "${{ vars.VARIABLE_1 }}" 
