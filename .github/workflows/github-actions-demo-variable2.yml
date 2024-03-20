@@ -13,4 +13,3 @@ jobs:
     - run: echo "${{ env.VARIABLE_2 }}" 
       env: 
         VARIABLE_2: Nova variable 2
-	
