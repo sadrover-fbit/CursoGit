@@ -1,4 +1,4 @@
-name: Demo variable de workflow
+name: Demo variable de workflow 1
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [workflow_dispatch]
 env:
